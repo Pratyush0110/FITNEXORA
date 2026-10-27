@@ -1,0 +1,108 @@
+<!-- FITNEXORA_OLD_BODY_WITH_TRAPS_V7 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--card:#111c2e;--line:#2b3a50;--text:#edf4ff;--muted:#9aaac0;--teal:#2dd4bf;--blue:#60a5fa}
+*{box-sizing:border-box}body{margin:0;background:transparent;color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+.wrap{background:linear-gradient(135deg,#0e1728,#111d30);border:1px solid #26374d;border-radius:18px;padding:18px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.head h3{font-size:16px;margin:0;font-weight:750}.hint{font-size:12px;color:var(--muted);margin-top:4px}
+.count{font-size:12px;color:#99f6e4;background:#0c3435;border:1px solid #236b68;border-radius:999px;padding:7px 11px}
+.bodies{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.panel{background:rgba(7,14,25,.55);border:1px solid #26374d;border-radius:15px;padding:12px;min-width:0}
+.panel h4{margin:0 0 4px;font-size:14px}.panel p{margin:0;color:var(--muted);font-size:11px}
+svg{display:block;width:100%;height:330px;max-width:310px;margin:7px auto 2px;overflow:visible}
+.skin{fill:#a9b7c9;fill-opacity:.18;stroke:#91a4bc;stroke-width:2;stroke-linejoin:round}
+.limb{fill:#a9b7c9;fill-opacity:.15;stroke:#91a4bc;stroke-width:2;stroke-linejoin:round}
+.muscle{cursor:pointer;stroke:#0e1728;stroke-width:1.5;fill:#3c6177;fill-opacity:.9;transition:fill .15s,filter .15s}
+.muscle:hover{fill:#5ba8b4;filter:drop-shadow(0 0 4px #2dd4bf)}
+.muscle.active{fill:#2dd4bf;fill-opacity:1;stroke:#ccfffa;stroke-width:2;filter:drop-shadow(0 0 5px rgba(45,212,191,.7))}
+.maplabel{font-size:9px;fill:#b7c7db;letter-spacing:1.4px;text-anchor:middle}
+.legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.chip{border:1px solid #34455c;background:#172338;color:#dce8f8;border-radius:9px;padding:8px 10px;font-size:12px;cursor:pointer}
+.chip:hover{border-color:#5a8e9a}.chip.active{background:#124744;border-color:#2dd4bf;color:#b9fff6}
+.footer{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid #26374d}
+.clear{border:1px solid #40516a;background:#1b283b;color:#dce8f8;border-radius:9px;padding:8px 12px;cursor:pointer;font-weight:650}
+@media(max-width:620px){.bodies{grid-template-columns:1fr}svg{height:290px}.wrap{padding:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div><h3>Select muscles directly on the body</h3><div class="hint">Click any highlighted muscle area. Select multiple groups across front and back. Traps are clickable on the upper back.</div></div>
+    <div id="count" class="count">0 muscle groups selected</div>
+  </div>
+  <div class="bodies">
+    <section class="panel">
+      <h4>Front body</h4><p>Chest · shoulders · arms · core · legs</p>
+      <svg viewBox="0 0 240 350" role="img" aria-label="Clickable front body muscle map">
+        <circle class="skin" cx="120" cy="27" r="18"/>
+        <path class="skin" d="M108 47 L132 47 L151 63 L160 93 L151 121 L143 155 L148 204 L143 273 L126 273 L120 214 L114 273 L97 273 L92 204 L97 155 L89 121 L80 93 L89 63 Z"/>
+        <path class="limb" d="M89 63 L68 73 L48 120 L57 126 L80 92 L98 81 Z M151 63 L172 73 L192 120 L183 126 L160 92 L142 81 Z"/>
+        <path class="limb" d="M97 204 L97 273 L93 326 L107 326 L114 273 L120 214 L126 273 L133 326 L147 326 L143 273 L148 204 Z"/>
+        <path class="muscle" data-muscle="Chest" d="M94 74 Q106 62 118 73 L118 100 Q104 104 94 91 Z"><title>Chest</title></path>
+        <path class="muscle" data-muscle="Chest" d="M122 73 Q134 62 146 74 L146 91 Q136 104 122 100 Z"><title>Chest</title></path>
+        <ellipse class="muscle" data-muscle="Front shoulders" cx="91" cy="68" rx="10" ry="12"><title>Front shoulders</title></ellipse>
+        <ellipse class="muscle" data-muscle="Front shoulders" cx="149" cy="68" rx="10" ry="12"><title>Front shoulders</title></ellipse>
+        <path class="muscle" data-muscle="Biceps" d="M72 84 Q80 80 84 91 L75 116 L66 119 L63 111 Z"><title>Biceps</title></path>
+        <path class="muscle" data-muscle="Biceps" d="M168 84 Q160 80 156 91 L165 116 L174 119 L177 111 Z"><title>Biceps</title></path>
+        <path class="muscle" data-muscle="Forearms" d="M63 119 L57 137 L64 141 L76 119 Z M177 119 L183 137 L176 141 L164 119 Z"><title>Forearms</title></path>
+        <path class="muscle" data-muscle="Abs / core" d="M108 103 L132 103 L137 150 L120 158 L103 150 Z"><title>Abs / core</title></path>
+        <path class="muscle" data-muscle="Quadriceps" d="M100 161 L118 166 L114 211 L106 247 L96 243 L96 202 Z"><title>Quadriceps</title></path>
+        <path class="muscle" data-muscle="Quadriceps" d="M122 166 L140 161 L144 202 L144 243 L134 247 L126 211 Z"><title>Quadriceps</title></path>
+        <path class="muscle" data-muscle="Calves" d="M98 252 L109 252 L106 294 L101 314 L94 313 Z M131 252 L142 252 L146 313 L139 314 L134 294 Z"><title>Calves</title></path>
+        <text class="maplabel" x="120" y="345">FRONT VIEW</text>
+      </svg>
+    </section>
+    <section class="panel">
+      <h4>Back body</h4><p>Upper back · rear arms · lower back · glutes · legs</p>
+      <svg viewBox="0 0 240 350" role="img" aria-label="Clickable back body muscle map">
+        <circle class="skin" cx="120" cy="27" r="18"/>
+        <path class="skin" d="M108 47 L132 47 L151 63 L160 93 L151 121 L143 155 L148 204 L143 273 L126 273 L120 214 L114 273 L97 273 L92 204 L97 155 L89 121 L80 93 L89 63 Z"/>
+        <path class="limb" d="M89 63 L68 73 L48 120 L57 126 L80 92 L98 81 Z M151 63 L172 73 L192 120 L183 126 L160 92 L142 81 Z"/>
+        <path class="limb" d="M97 204 L97 273 L93 326 L107 326 L114 273 L120 214 L126 273 L133 326 L147 326 L143 273 L148 204 Z"/>
+        <path class="muscle" data-muscle="Lats / upper back" d="M96 72 Q120 62 144 72 L143 116 L132 137 L120 126 L108 137 L97 116 Z"><title>Lats / upper back</title></path>
+        <!-- Trapezius: neck base across the upper back to both shoulders -->
+        <path class="muscle" data-muscle="Traps" d="M108 48 L120 53 L132 48 L145 63 L132 76 L120 91 L108 76 L95 63 Z"><title>Traps</title></path>
+        <ellipse class="muscle" data-muscle="Rear shoulders" cx="91" cy="68" rx="10" ry="12"><title>Rear shoulders</title></ellipse>
+        <ellipse class="muscle" data-muscle="Rear shoulders" cx="149" cy="68" rx="10" ry="12"><title>Rear shoulders</title></ellipse>
+        <path class="muscle" data-muscle="Triceps" d="M72 84 Q80 80 84 91 L75 116 L66 119 L63 111 Z"><title>Triceps</title></path>
+        <path class="muscle" data-muscle="Triceps" d="M168 84 Q160 80 156 91 L165 116 L174 119 L177 111 Z"><title>Triceps</title></path>
+        <path class="muscle" data-muscle="Lower back" d="M109 128 L131 128 L135 157 L120 165 L105 157 Z"><title>Lower back</title></path>
+        <ellipse class="muscle" data-muscle="Glutes" cx="108" cy="173" rx="12" ry="15"><title>Glutes</title></ellipse>
+        <ellipse class="muscle" data-muscle="Glutes" cx="132" cy="173" rx="12" ry="15"><title>Glutes</title></ellipse>
+        <path class="muscle" data-muscle="Hamstrings" d="M99 190 L117 193 L113 226 L106 246 L97 243 Z"><title>Hamstrings</title></path>
+        <path class="muscle" data-muscle="Hamstrings" d="M123 193 L141 190 L143 243 L134 246 L127 226 Z"><title>Hamstrings</title></path>
+        <path class="muscle" data-muscle="Calves" d="M98 252 L109 252 L106 294 L101 314 L94 313 Z M131 252 L142 252 L146 313 L139 314 L134 294 Z"><title>Calves</title></path>
+        <text class="maplabel" x="120" y="345">BACK VIEW</text>
+      </svg>
+    </section>
+  </div>
+  <div id="legend" class="legend"></div>
+  <div class="footer"><div id="summary" class="hint">No muscles selected yet.</div><button class="clear" id="clear">Clear selection</button></div>
+</div>
+<script>
+const ALL = ["Chest","Front shoulders","Biceps","Forearms","Abs / core","Quadriceps","Calves","Traps","Lats / upper back","Rear shoulders","Triceps","Lower back","Glutes","Hamstrings"];
+let selected = [];
+function send(type, value){ window.parent.postMessage({isStreamlitMessage:true,type:type,...value},"*"); }
+function setHeight(){ send("streamlit:setFrameHeight",{height:document.documentElement.scrollHeight}); }
+function emit(){ send("streamlit:setComponentValue",{value:selected,dataType:"json"}); render(); }
+function toggle(m){ selected = selected.includes(m) ? selected.filter(x=>x!==m) : [...selected,m]; emit(); }
+function render(){
+ document.querySelectorAll("[data-muscle]").forEach(el=>el.classList.toggle("active",selected.includes(el.dataset.muscle)));
+ const legend=document.getElementById("legend"); legend.innerHTML="";
+ ALL.forEach(m=>{const b=document.createElement("button");b.className="chip"+(selected.includes(m)?" active":"");b.textContent=(selected.includes(m)?"✓ ":"＋ ")+m;b.onclick=()=>toggle(m);legend.appendChild(b)});
+ document.getElementById("count").textContent=selected.length+" muscle group"+(selected.length===1?"":"s")+" selected";
+ document.getElementById("summary").textContent=selected.length?selected.join(" · "):"No muscles selected yet.";
+ setHeight();
+}
+document.querySelectorAll("[data-muscle]").forEach(el=>{el.addEventListener("click",()=>toggle(el.dataset.muscle));el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle(el.dataset.muscle)}})});
+document.getElementById("clear").onclick=()=>{selected=[];emit()};
+window.addEventListener("message",e=>{if(e.data && e.data.type==="streamlit:render"){const args=e.data.args||{};selected=Array.isArray(args.selected)?args.selected:[];render();}});
+send("streamlit:componentReady",{apiVersion:1});
+render();
+</script>
+</body></html>
