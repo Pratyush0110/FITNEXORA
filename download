@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Local databases and user data
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets and environment files
+.streamlit/secrets.toml
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
