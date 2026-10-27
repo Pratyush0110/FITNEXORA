@@ -1,3 +1,19 @@
+
+# FITNEXORA
+
+Personalized Fitness & Nutrition Platform
+
+**[Live Demo](https://fitnexora-g9jyyucxifake73wbmnhkw.streamlit.app/)**
+
+## Features
+- User signup and login
+- Personalized workout planning
+- Nutrition tracking
+- Meal plans with ingredient quantities and nutrition breakdown
+- Progress tracking
+
+## Tech Stack
+Python, Streamlit, SQLite, Pandas, Plotly
 # FITNEXORA — Personalized Fitness & Nutrition Platform
 
 FITNEXORA is a Streamlit portfolio project for workout planning and nutrition tracking. It includes account signup/login, user-specific workout and nutrition data, workout templates, a nutrition tracker, and profile-based meal-plan suggestions with food quantities and nutrient estimates.
