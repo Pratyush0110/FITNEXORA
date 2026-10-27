@@ -1,10 +1,9 @@
 
-# FITNEXORA
+## 🚀 Live Demo
 
-Personalized Fitness & Nutrition Platform
+**[🌐 Open FITNEXORA — Live Application](https://fitnexora-jve7bcrtnvez4qzekf7lxj.streamlit.app/)**
 
-**[Live Demo](https://fitnexora-g9jyyucxifake73wbmnhkw.streamlit.app/)**
-
+Try the live fitness and nutrition platform, including workout planning and nutrition tracking.
 ## Features
 - User signup and login
 - Personalized workout planning
