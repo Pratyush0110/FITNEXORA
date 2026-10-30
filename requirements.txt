@@ -2,5 +2,5 @@ streamlit
 pandas
 plotly
 numpy<2
-streamlit-webrtc>=0.47.7
+streamlit-webrtc>=0.78.1
 mediapipe==0.10.21
