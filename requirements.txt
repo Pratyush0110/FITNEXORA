@@ -1,11 +1,8 @@
-
 streamlit
 pandas
 plotly
 numpy
-streamlit-webrtc>=0.79
+streamlit-webrtc>=0.47.7
 mediapipe>=0.10.14,<0.11
 opencv-python-headless>=4.10,<5
-streamlit-webrtc
-mediapipe
-opencv-python-headless
+av>=18,<20
