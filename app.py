@@ -1988,11 +1988,6 @@ elif page == "AI Posture Coach":
     key=f"fitnexora-posture-{posture_exercise.lower().replace('-', '')}",
     video_processor_factory=processor_factory,
     media_stream_constraints={"video": True, "audio": False},
-    rtc_configuration={
-        "iceServers": [
-            {"urls": ["stun:stun.l.google.com:19302"]}
-        ]
-    },
     async_processing=True,
 )
        
