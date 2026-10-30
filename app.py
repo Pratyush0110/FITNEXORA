@@ -1987,21 +1987,15 @@ elif page == "AI Posture Coach":
         webrtc_streamer(
     key=f"fitnexora-posture-{posture_exercise.lower().replace('-', '')}",
     video_processor_factory=processor_factory,
-    media_stream_constraints={
-        "video": True,
-        "audio": False
-    },
+    media_stream_constraints={"video": True, "audio": False},
     rtc_configuration={
         "iceServers": [
-            {
-                "urls": [
-                    "stun:stun.l.google.com:19302"
-                ]
-            }
+            {"urls": ["stun:stun.l.google.com:19302"]}
         ]
     },
     async_processing=True,
 )
+       
         st.caption(
             "Rep counts and feedback are approximate. The current prototype uses simple 2D joint-angle thresholds; "
             "it does not determine injury risk or guarantee correct form."
